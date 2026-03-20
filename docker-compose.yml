@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  plan-stat-app:
+    build: .
+    container_name: plan-stat-app
+    ports:
+      - "8502:8502"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
